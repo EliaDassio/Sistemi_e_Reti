@@ -12,17 +12,20 @@ def randomize(index):
         print(chr(val), end = '')
     print("")
 
+def main():
+    witch = int(input("short or long pasword? (1 for short or 2 for long)? "))
 
-witch = int(input("short or long pasword? (1 for short or 2 for long)? "))
+    while witch != 1 and witch != 2:
+        witch = int(input("please answer correctly, short or long pasword (1 for short or 2 for long)? "))
 
-while witch != 1 and witch != 2:
-    witch = int(input("please answer correctly, short or long pasword (1 for short or 2 for long)? "))
+    print("")
 
-print("")
+    if witch == 1:
+        index = 8
+    if witch == 2:
+        index = 20
 
-if witch == 1:
-    index = 8
-if witch == 2:
-    index = 20
+    randomize(index)
 
-randomize(index)
+if __name__ == "__main__":
+    main()
